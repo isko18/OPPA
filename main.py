@@ -1,5 +1,6 @@
 import pywhatkit
 import json
+import time
 
 with open('phones.json', encoding='utf-8') as file:
     list_of_number = json.load(file)
@@ -24,6 +25,7 @@ https://www.oppa.kg/
         pywhatkit.sendwhats_image(phone, photo , message, tab_close=True)
         if k == 1600:
             break
+        time.sleep(30)
 
 def main():
     send_message_inst()
